@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Variable Demo</title>
+</head>
+<body>
+
+    <h2>JavaScript var, let, const Example</h2>
+
+    <button onclick="showVariables()">Show Variables</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showVariables() {
+            var name = "Hajara";
+            let age = 20;
+            const country = "India";
+            document.getElementById("output").innerHTML =
+                "Name (var): " + name + "<br>" +
+                "Age (let): " + age + "<br>" +
+                "Country (const): " + country;
+        }
+    </script>
+
+</body>
+</html>

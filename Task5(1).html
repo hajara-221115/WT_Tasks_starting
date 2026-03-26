@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task5(1)</title>
+</head>
+<body>
+
+    <p id="myText" style="padding: 10px;">
+        This is some text whose style will change.
+    </p>
+
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function changeStyle() {
+            var element = document.getElementById("myText");
+            element.style.color = "white";
+            element.style.fontSize = "30px";
+            element.style.backgroundColor = "blue";
+        }
+    </script>
+
+</body>
+</html>

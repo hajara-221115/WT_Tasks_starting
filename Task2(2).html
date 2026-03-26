@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function Syntax Demo</title>
+</head>
+<body>
+
+    <h2>Arrow Functions – Examples & Output</h2>
+
+    <button onclick="demoNoParam()">No-Parameter Arrow Function</button>
+    <button onclick="demoOneParam()">One-Parameter Arrow Function</button>
+    <button onclick="demoMultipleParams()">Multiple Parameters</button>
+    <button onclick="demoImplicitReturn()">Implicit Return</button>
+    <button onclick="demoObjectReturn()">Return Object</button>
+
+    <h3 id="output"></h3>
+
+    <script>
+        // 1. Arrow function with NO parameters
+        const noParam = () => {
+            return "This is an arrow function with no parameters.";
+        };
+
+        // 2. Arrow function with ONE parameter
+        const oneParam = name => {
+            return "Hello, " + name + "! (arrow function)";
+        };
+
+        // 3. Arrow function with MULTIPLE parameters
+        const add = (a, b) => {
+            return a + b;
+        };
+
+        // 4. Arrow function with IMPLICIT return (no {} needed)
+        const multiply = (a, b) => a * b;
+
+        // 5. Arrow function RETURNING AN OBJECT (parentheses required)
+        const getUser = () => ({
+            username: "Hajarabee",
+            age: 20
+        });
+
+        // Functions to display output
+        function demoNoParam() {
+            document.getElementById("output").innerText = noParam();
+        }
+
+        function demoOneParam() {
+            document.getElementById("output").innerText = oneParam("Hajarabee");
+        }
+
+        function demoMultipleParams() {
+            document.getElementById("output").innerText =
+                "5 + 10 = " + add(5, 10);
+        }
+
+        function demoImplicitReturn() {
+            document.getElementById("output").innerText =
+                "4 × 6 = " + multiply(4, 6);
+        }
+
+        function demoObjectReturn() {
+            const user = getUser();
+            document.getElementById("output").innerText =
+                "User: " + user.username + ", Age: " + user.age;
+        }
+    </script>
+
+</body>
+</html>

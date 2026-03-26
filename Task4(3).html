@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add & Remove Content</title>
+</head>
+<body>
+
+    <div id="container">
+        <p>This is the original content.</p>
+    </div>
+
+    <button onclick="addContent()">Add Content</button>
+    <button onclick="removeContent()">Remove Content</button>
+
+    <script>
+        function addContent() {
+            var container = document.getElementById("container");
+            var newPara = document.createElement("p");
+            newPara.innerHTML = "This is newly added content.";
+            container.appendChild(newPara);
+        }
+        function removeContent() {
+            var container = document.getElementById("container");
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            }
+        }
+    </script>
+
+</body>
+</html>

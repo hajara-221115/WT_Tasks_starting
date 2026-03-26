@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Style Example</title>
+</head>
+<body>
+
+    <p id="myText" style="padding: 10px;">
+        This text will toggle styles!
+    </p>
+
+    <button onclick="toggleStyle()">Toggle Style</button>
+
+    <script>
+        let toggled = false; // track the current state
+
+        function toggleStyle() {
+            var element = document.getElementById("myText");
+
+            if (toggled) {
+                // Style 1
+                element.style.color = "black";
+                element.style.fontSize = "20px";
+                element.style.backgroundColor = "white";
+            } else {
+                // Style 2
+                element.style.color = "white";
+                element.style.fontSize = "30px";
+                element.style.backgroundColor = "blue";
+            }
+
+            toggled = !toggled; // flip the state
+        }
+    </script>
+
+</body>
+</html>

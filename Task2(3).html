@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Operations</title>
+</head>
+<body>
+
+    <h2>Simple Math Operations Using Functions</h2>
+
+    <label>Enter First Number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter Second Number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="showAddition()">Add</button>
+    <button onclick="showSubtraction()">Subtract</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        // Function for Addition
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Function for Subtraction
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        // Display addition result
+        function showAddition() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + add(a, b);
+        }
+
+        // Display subtraction result
+        function showSubtraction() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + subtract(a, b);
+        }
+    </script>
+
+</body>
+</html>
